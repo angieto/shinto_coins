@@ -1,0 +1,1 @@
+# shinto_coins
