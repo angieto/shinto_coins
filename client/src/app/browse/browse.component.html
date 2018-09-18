@@ -1,0 +1,26 @@
+<div class="container">
+    <h2 class="mt-5">Browse the Ledger</h2>
+    <p class="mt-3">Here you can browse all ShintoCoin</p>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th class="text-center" scope="col">Action</th>
+                <th class="text-center" scope="col">Amount</th>
+                <th class="text-center" scope="col">Value</th>
+                <th class="text-center" scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let transaction of history" class="text-center">
+                <td>{{ transaction.action }}</td>
+                <td>{{ transaction.amount }}</td>
+                <td>{{ transaction.value }}</td>
+                <td>
+                    <form>
+                        <button type="submit" class="btn btn-primary" [routerLink]="[ '/transaction', transaction.id ]" >Details</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
